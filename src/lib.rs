@@ -6,7 +6,7 @@ use serde::{
 
 // serde_literals
 // deserialise and serialise literal strings, ints, floats, bools and chars into enum unit variants
-pub struct LitStr<'a>(&'a str);
+pub struct LitStr<'a>(pub &'a str);
 
 impl<'a, 'de> Visitor<'de> for LitStr<'a> {
     type Value = ();
@@ -27,7 +27,7 @@ impl<'a, 'de> Visitor<'de> for LitStr<'a> {
     }
 }
 
-pub struct LitFloat(f64);
+pub struct LitFloat(pub f64);
 
 impl<'de> Visitor<'de> for LitFloat {
     type Value = ();

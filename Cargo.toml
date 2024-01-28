@@ -1,6 +1,6 @@
 [package]
 name = "serde_literals"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Support for serialising and deserialising literals directly into enum unit variants"
 repository = "https://github.com/andrewlowndes/serde_literals"
