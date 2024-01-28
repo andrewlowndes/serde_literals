@@ -144,7 +144,7 @@ impl<'de, const C: char> Visitor<'de> for LitChar<C> {
     where
         E: de::Error,
     {
-        if v.chars().next() == Some(C) {
+        if v.starts_with(C) {
             Ok(())
         } else {
             Err(de::Error::invalid_value(Unexpected::Str(v), &self))
