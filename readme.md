@@ -2,11 +2,7 @@
 Add support for serialising and deserialing literals directly into enum unit variants.
 
 ## How to use
-Add the crate to your Cargo.toml dependencies:
-```toml
-[dependencies]
-serde_literals = "0.1.0"
-```
+Add the crate to your `Cargo.toml` dependencies via `cargo add serde_literals`.
 
 Import and use one of the `LitBool`, `LitChar` and `LitInt` structs in the `#[serde(with = "..")` attribute. For example:
 ```rust
